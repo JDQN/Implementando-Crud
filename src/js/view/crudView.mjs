@@ -35,9 +35,10 @@ export class CrudView {
       inpurtCreateC.required = true;
       this.#privateBody.appendChild(inpurtCreateC);
 
-      const create = document.createElement('input');
-      create.type="Button";
-      create.classList.add('form-control');
+      const create = document.createElement('button');
+      create.innerHTML = 'Create';
+      create.type = "button";
+      create.classList.add('buttonCreate','mt-1','mb-2','btn','btn-success');
       create.value = "Crear";
       create.addEventListener('click', () => { 
          controlador.create(
