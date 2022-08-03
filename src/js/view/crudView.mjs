@@ -23,11 +23,10 @@ export class CrudView {
 
       const inpurtCreateNombre = document.createElement('input');
       inpurtCreateNombre.type = 'text';
-      inpurtCreateNombre.classList.add('form-control');
+      inpurtCreateNombre.classList.add('form-control','mt-2','mb-2');
       inpurtCreateNombre.placeholder = 'Nombre personaje';
       inpurtCreateNombre.required = true;
       this.#privateBody.appendChild(inpurtCreateNombre);
-
 
       const inpurtCreateC = document.createElement('input');
       inpurtCreateC.type = 'text';
@@ -41,7 +40,6 @@ export class CrudView {
       create.classList.add('form-control');
       create.value = "Crear";
       create.addEventListener('click', () => { 
-         
          controlador.create(
             inpurtCreateNombre.value, 
             inpurtCreateC.value 
@@ -66,26 +64,25 @@ export class CrudView {
       card.classList.add('card');
       card.innerHTML = `
          <div class="card-body">
-            <h5 class="card-title">${cardSeiyas.getName()}</h5>
-            <p class="card-text">${cardSeiyas.getConstelacion()}</p>
+            <h5 class="card-title">Nombre Persobnaje: ${cardSeiyas.getName()}</h5>
+            <p class="card-text">Constelacion: ${cardSeiyas.getConstelacion()}</p>
          </div>`;
 
-      
       /* Elemento HTML actualizar */
       const inputEditarNombre = document.createElement('input');
       inputEditarNombre.type = 'text';
       inputEditarNombre.classList.add('form-control','mt-2','mb-2');
       inputEditarNombre.id = `inputEditar${cardSeiyas.getId()}`;
-      inputEditarNombre.placeholder = 'Nombre personaje';
-      inputEditarNombre.value = cardSeiyas.getName();
+      inputEditarNombre.placeholder = 'Nombre personaje:';
+      //inputEditarNombre.value = cardSeiyas.getName();
       card.appendChild(inputEditarNombre);
 
       const inputEditarC = document.createElement('input');
       inputEditarC.type = 'text';
       inputEditarC.classList.add('form-control','mt-2','mb-2');
       inputEditarC.id = `inputEditar${cardSeiyas.getId()}`;
-      inputEditarC.placeholder = 'Nombre constelacion';
-      inputEditarC.value = cardSeiyas.getConstelacion();
+      inputEditarC.placeholder = 'Nombre constelacion:';
+      //inputEditarC.value = cardSeiyas.getConstelacion();
       card.appendChild(inputEditarC);
       
       const editar = document.createElement('button');

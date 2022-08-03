@@ -1,14 +1,9 @@
 {
   "santos": [
     {
-      "name": "Hyoga",
+      "name": "Hyoga1",
       "constelacion": "Cisne",
-      "id": 1
-    },
-    {
-      "id": 2,
-      "name": "Hyoga",
-      "constelacion": "Cisne"
+      "id": 2
     },
     {
       "id": 3,

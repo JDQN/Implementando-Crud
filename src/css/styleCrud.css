@@ -3,27 +3,49 @@
    padding:0;
    box-sizing: border-box;
 }
-
 body{
    font-family: 'Roboto', sans-serif;
    font-size: 14px;
-   margin:9px;
+   margin:16px;
+   background-color: rgb(145, 255, 246);
 }
-
+div{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
 .card{
    width: 30%;
    margin: 9px auto;
    padding:6px 9px;
    display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
 }
-.form-control{
+.card-body{
+   width: 100%;
    display: flex;
    flex-direction: column;
+}
+.form-control{
+   display: flex; 
+   flex-direction: row;
    justify-content: center;
    align-items: center;
+   
 }
+
 .button{
    width: 40%;
+   border-radius: 6px;
+   padding: 9px;
+   font-size: 16px;
+   margin:9px auto ;
+   cursor: pointer; 
+}
+input{
+   width: 50% !important ;
    border-radius: 6px;
    padding: 9px;
    font-size: 16px;
