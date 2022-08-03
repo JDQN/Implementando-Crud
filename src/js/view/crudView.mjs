@@ -45,23 +45,19 @@ export class CrudView {
          controlador.create(
             inpurtCreateNombre.value, 
             inpurtCreateC.value 
-         
          );
-         //location.reload();
       })
       this.#privateBody.appendChild(create);
-
-
 
 
       cardSeiya.forEach((cardSeiyas) => {
          console.log(cardSeiyas);
          var card = this.privateCardCrud(cardSeiyas);
          this.#privateBody.appendChild(card);
-         
       });
    }
 
+   
    privateCardCrud(cardSeiyas){
 
       const controlador = new CrudController();
@@ -74,10 +70,11 @@ export class CrudView {
             <p class="card-text">${cardSeiyas.getConstelacion()}</p>
          </div>`;
 
+      
       /* Elemento HTML actualizar */
       const inputEditarNombre = document.createElement('input');
       inputEditarNombre.type = 'text';
-      inputEditarNombre.classList.add('form-control');
+      inputEditarNombre.classList.add('form-control','mt-2','mb-2');
       inputEditarNombre.id = `inputEditar${cardSeiyas.getId()}`;
       inputEditarNombre.placeholder = 'Nombre personaje';
       inputEditarNombre.value = cardSeiyas.getName();
@@ -85,48 +82,38 @@ export class CrudView {
 
       const inputEditarC = document.createElement('input');
       inputEditarC.type = 'text';
-      inputEditarC.classList.add('form-control');
+      inputEditarC.classList.add('form-control','mt-2','mb-2');
       inputEditarC.id = `inputEditar${cardSeiyas.getId()}`;
       inputEditarC.placeholder = 'Nombre constelacion';
       inputEditarC.value = cardSeiyas.getConstelacion();
       card.appendChild(inputEditarC);
       
-      const editar = document.createElement('input');
-      editar.type="Button";
-      editar.classList.add('form-control');
+      const editar = document.createElement('button');
+      editar.innerHTML = 'Editar';
+      editar.type = "button";
+      editar.classList.add('button','mt-1','mb-2','btn','btn-primary');
       editar.value = "Editar";
       editar.addEventListener('click', () => { 
-         
          controlador.update(cardSeiyas.getId(), 
          inputEditarNombre.value, 
          inputEditarC.value
          );
-         //location.reload();
+
       })
       card.appendChild(editar);
 
 
 
       /*Boton delete  un personaje*/
-      const borrar = document.createElement('input');
-      borrar.type="Button";
-      borrar.classList.add('form-control');
+      const borrar = document.createElement('button');
+      borrar.innerHTML = 'Borrar';
+      borrar.type = "Button";
+      borrar.classList.add('button','mt-1','mb-2','btn','btn-outline-danger');
       borrar.value = "Eliminar";
       borrar.addEventListener('click', () => { 
-         
          controlador.delete(cardSeiyas.getId());
-         //location.reload();
       })
       card.appendChild(borrar);
-
-
-
-
-
-
-
-
-
 
 
       return card;

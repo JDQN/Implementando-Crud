@@ -44,7 +44,5 @@ export class CrudModel{
    toString(){
       return `${this.#privateId} ${this.#privateName} ${this.#privateConstelacion}`;
    }
-
-
 }
 
