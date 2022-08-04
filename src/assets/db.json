@@ -3,27 +3,17 @@
     {
       "name": "Seiya",
       "constelacion": "Pegazo",
-      "id": 3
-    },
-    {
-      "id": 5,
-      "name": "Hyoga",
-      "constelacion": "Cisne"
+      "id": 1
     },
     {
       "name": "Shun",
       "constelacion": "Andromeda",
-      "id": 6
+      "id": 2
     },
     {
       "name": "Camus",
       "constelacion": "Aquarius",
-      "id": 7
-    },
-    {
-      "name": "Juan",
-      "constelacion": "David Quimbayo",
-      "id": 8
+      "id": 3
     }
   ]
 }

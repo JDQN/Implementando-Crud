@@ -20,6 +20,7 @@ export class CrudController{
    }
 
    async update(id, name, constelacion){
+      
       if(name == "" || constelacion == ""){
          Swal.fire(
             'Error',
@@ -42,16 +43,51 @@ export class CrudController{
 
    /* Metodo Create */
    async create(name, constelacion){
-      const service = new crudService(this.#privateApiyURL);
-      let data = { "name":name, "constelacion":constelacion };
-      await service.create(data);
+      
+      if(name == "" || constelacion == ""){
+         Swal.fire({
+            text: "Ingrese el nombre y la constelacion",
+            icon: 'warning',
+            showCancelButton: false,
+            cancelButtonColor: '#d33',
+         })
+      }else{
+         const service = new crudService(this.#privateApiyURL);
+         let data = { "name":name, "constelacion":constelacion };
+         await service.create(data);
+      
+         Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Your work has been saved',
+            showConfirmButton: false,
+            timer: 1500
+         })
+      }
    }
 
 
    /*Metodo delete */
    async delete(id){
-      const service = new crudService(this.#privateApiyURL);
-      await service.delete(id);
+      Swal.fire({
+         title: 'Seguro de que desea eliminar?',
+         text: "Esta apunto de eliminar la targeta!!",
+         icon: 'warning',
+         showCancelButton: true,
+         confirmButtonColor: '#3085d6',
+         cancelButtonColor: '#d33',
+         confirmButtonText: 'Si, Eliminar!'
+      }).then((result) => {
+      if (result.isConfirmed) {
+            Swal.fire(
+               'Se elimino!',
+               'La targeta se elimino correctamente',
+               'success'
+            )
+            const service = new crudService(this.#privateApiyURL);
+            service.delete(id);
+         }
+      })
    }
 }
 
