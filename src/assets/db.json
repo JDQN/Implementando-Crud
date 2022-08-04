@@ -1,14 +1,9 @@
 {
   "santos": [
     {
-      "name": "Hyoga",
-      "constelacion": "Cisne",
-      "id": 2
-    },
-    {
-      "id": 3,
-      "name": "Hyoga",
-      "constelacion": "Cisne"
+      "name": "",
+      "constelacion": "",
+      "id": 3
     },
     {
       "id": 4,
@@ -24,6 +19,11 @@
       "name": "Shun",
       "constelacion": "Andromeda",
       "id": 6
+    },
+    {
+      "name": "Camus",
+      "constelacion": "Aquarius",
+      "id": 7
     }
   ]
 }

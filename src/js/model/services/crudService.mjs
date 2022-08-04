@@ -57,6 +57,8 @@ export class crudService{
    }
    postData(card){
       console.log(card.getName());
+
+      Swil
       return fetch(`${this.#privateUrl}/santos`,{
          method: 'POST',
          headers: {

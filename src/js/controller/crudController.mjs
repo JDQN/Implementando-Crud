@@ -20,6 +20,15 @@ export class CrudController{
    }
 
    async update(id, name, constelacion){
+      const update = await name == "" || constelacion == "";
+
+      if(update){
+         Swal.fire({
+            icon: 'error',
+            title: 'Your work has been saved',
+            text: 'Please, fill the fields'
+         })
+      }
       const service = new crudService(this.#privateApiyURL);
       let data = { "id":id, "name":name, "constelacion":constelacion };
       await service.update(data);
