@@ -12,11 +12,14 @@ export class crudService{
    async getCard(){
       const cardData = await this.getData();
       const arrayCards = new Array();
+
       cardData.forEach((card) => {
          arrayCards.push(new CrudModel(card.id, card.name, card.constelacion));
       });
       return arrayCards;
    }
+
+
    getData(){
       return fetch(`${this.#privateUrl}/santos`)
       .then(response => response.json())
@@ -53,12 +56,10 @@ export class crudService{
       card.setConstelacion(data.constelacion);
 
       const cardData = await this.postData(card);
-      console.log(cardData);
+      console.log(card);
    }
    postData(card){
       console.log(card.getName());
-
-      Swil
       return fetch(`${this.#privateUrl}/santos`,{
          method: 'POST',
          headers: {

@@ -20,18 +20,24 @@ export class CrudController{
    }
 
    async update(id, name, constelacion){
-      const update = await name == "" || constelacion == "";
-
-      if(update){
+      if(name == "" || constelacion == ""){
+         Swal.fire(
+            'Error',
+            'Ingresar un nombre nuevo al tablero que desea editar',
+            'error'
+         )
+      }else{
          Swal.fire({
-            icon: 'error',
-            title: 'Your work has been saved',
-            text: 'Please, fill the fields'
+            position: 'top-end',
+            icon: 'success',
+            text: 'Se actualizo correctamente',
+            showConfirmButton: false,
+            timer: 9000
          })
+         const service = new crudService(this.#privateApiyURL);
+         let data = { "id":id, "name":name, "constelacion":constelacion };
+         await service.update(data);
       }
-      const service = new crudService(this.#privateApiyURL);
-      let data = { "id":id, "name":name, "constelacion":constelacion };
-      await service.update(data);
    }
 
    /* Metodo Create */
@@ -40,6 +46,7 @@ export class CrudController{
       let data = { "name":name, "constelacion":constelacion };
       await service.create(data);
    }
+
 
    /*Metodo delete */
    async delete(id){

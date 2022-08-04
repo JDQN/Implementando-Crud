@@ -1,14 +1,9 @@
 {
   "santos": [
     {
-      "name": "",
-      "constelacion": "",
+      "name": "Seiya",
+      "constelacion": "Pegazo",
       "id": 3
-    },
-    {
-      "id": 4,
-      "name": "Shun",
-      "constelacion": "Andromeda"
     },
     {
       "id": 5,
@@ -24,6 +19,11 @@
       "name": "Camus",
       "constelacion": "Aquarius",
       "id": 7
+    },
+    {
+      "name": "Juan",
+      "constelacion": "David Quimbayo",
+      "id": 8
     }
   ]
 }
