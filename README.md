@@ -26,6 +26,6 @@
 La actividad consiste en consumir una api falsa en este caso utilizamos JSON Server para poder utilizar la api local y la parte del front-end la seguimos manejando mediante el DOM y la estructura de este proyecto la manejamos con MVC.
 
 
-<h3>🌋 MODELO BASE DE DATOS</h3>
+<h3>🌋 Asi se ve el aplicativo </h3>
 
-<img src="https://github.com/JDQN/reto-final-desarrollo-web/blob/main/resources/db/my-krello.png"  width="500px">
+<img src="https://github.com/JDQN/Implementando-Crud/blob/main/img.jpeg?raw=true"  width="500px">
