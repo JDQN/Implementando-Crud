@@ -20,6 +20,8 @@
 
 - ☕ &nbsp; JAVASCRIPT | MVC
 - ☕ &nbsp; Front-end  realizado mediante DOM y Bootstrap | MVC
+- 🌐 &nbsp;  Link del video esplicativo https://youtu.be/XEKpI2ofj04
+
 
 <h3>👨‍💻 TALLER API FALSA</h3>
 
