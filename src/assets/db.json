@@ -14,6 +14,51 @@
       "name": "Camus",
       "constelacion": "Aquarius",
       "id": 3
+    },
+    {
+      "name": "Apolo",
+      "constelacion": "Apolo",
+      "id": 4
+    },
+    {
+      "name": "Krest",
+      "constelacion": "Aquarius",
+      "id": 5
+    },
+    {
+      "name": "Sasha",
+      "constelacion": "Athena",
+      "id": 6
+    },
+    {
+      "name": "Marin",
+      "constelacion": "Aquiula",
+      "id": 7
+    },
+    {
+      "name": "Kiki",
+      "constelacion": "Aries",
+      "id": 8
+    },
+    {
+      "name": "Dali",
+      "constelacion": "Corona Borealis",
+      "id": 9
+    },
+    {
+      "name": "Dali",
+      "constelacion": "Corona Borealis",
+      "id": 10
+    },
+    {
+      "name": "Regulus",
+      "constelacion": "Loe Authentic",
+      "id": 11
+    },
+    {
+      "name": "Ban",
+      "constelacion": "Leo Minor",
+      "id": 12
     }
   ]
 }
